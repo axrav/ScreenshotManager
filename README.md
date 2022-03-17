@@ -7,6 +7,11 @@ A simple screenshot manager for my personal us as i am lazy to copy paste screen
 
 ### Use a Post request to post the screenshot, it returns a url of the uploaded screenshot
 
+### running server
+``` go run main.go ```
+### Binary
+make ssmanager executable
+``` ./ssmanager ```
 ### Via Curl and Maim:
 ```maim -sqm 10 | curl -sL --header "password: YOURPASS" -F file=@- hostname/upload | tr -d '"' | xclip -selection clipboard  ```
 
