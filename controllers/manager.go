@@ -83,7 +83,7 @@ func SendScreenshot(w http.ResponseWriter, r *http.Request){
 func ThePort() string {
 	var port string
 	if os.Getenv("DEFAULT_PORT") == ""{
-		port = "8080"
+		port = "8000"
 	} else {
 		port= os.Getenv("DEFAULT_PORT")
 	}
