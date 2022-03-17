@@ -19,3 +19,7 @@ make ssmanager executable
 ``` maim -sqm 10 | curl -sL --header "password: vegeta" -F file=@- https://vegetaxd.me/upload | tr -d '"' | xclip -selection clipboard ```
 
 Thanks to [TheHamkerCat](https://github.com/thehamkercat) for the idea xD
+
+### Packages Used
+- [Maim](https://github.com/naelstrof/maim)
+- [Curl](https://github.com/curl/curl)
