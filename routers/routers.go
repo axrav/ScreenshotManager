@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -9,9 +10,17 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// the routor function
 func Router() *mux.Router {
-	app := mux.NewRouter()
+	app := mux.NewRouter() // mux router
+	port := manager.ThePort()
+	portUsed := fmt.Sprintf(":%v", port)
+
+	// managing handlers
 	app.HandleFunc("/upload", manager.UploadScreenshot).Methods("POST")
-	log.Fatal(http.ListenAndServe(":8080", app))
+	app.HandleFunc("/screen/{path}", manager.SendScreenshot).Methods("GET")
+	
+	// starting server
+	log.Fatal(http.ListenAndServe(portUsed, app))
 	return app
 }
