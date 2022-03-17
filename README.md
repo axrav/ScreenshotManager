@@ -1,5 +1,5 @@
 # ScreenshotManager
-A simple screenshot manager for my personal us as i am lazy to copy paste screenshots everytime
+A simple screenshot manager for my personal use as I am lazy to copy paste screenshots everytime
 
 ## Copy example.env to .env and add your values.
 
