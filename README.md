@@ -11,7 +11,7 @@ A simple screenshot manager for my personal us as i am lazy to copy paste screen
 ``` go run main.go ```
 ### Binary
 make ssmanager executable
-``` ./ssmanager ```
+``` ./bin/ssmanager ```
 ### Via Curl and Maim:
 ```maim -sqm 10 | curl -sL --header "password: YOURPASS" -F file=@- hostname/upload | tr -d '"' | xclip -selection clipboard  ```
 
