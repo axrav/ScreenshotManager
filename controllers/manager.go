@@ -30,12 +30,12 @@ func UploadScreenshot(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	defer file.Close()
-	saved, err2 := ioutil.TempFile("uploads", "*.jpg")
+	saved, err2 := ioutil.TempFile("screenshots", "*.jpg")
 	if err2 != nil{
 		fmt.Printf("[ERROR] %v\n", err2)
 		return
 	}
-	filename := strings.Replace(saved.Name(), "uploads/" ,"", 1)
+	filename := strings.Replace(saved.Name(), "screenshots/" ,"", 1)
 	fmt.Println("[INFO] A File has been uploaded", filename)
 	defer saved.Close()
 
@@ -68,7 +68,7 @@ func SendScreenshot(w http.ResponseWriter, r *http.Request){
 	params := mux.Vars(r)
 	w.Header().Set("Content-Type", "image/jpeg")
 	imagePath := params["path"]
-	finalImage := fmt.Sprintf("uploads/%v", imagePath)
+	finalImage := fmt.Sprintf("screenshots/%v", imagePath)
 
 	// Reading the image bytes
 	imagebytes, err := ioutil.ReadFile(finalImage)
