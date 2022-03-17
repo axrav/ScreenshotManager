@@ -56,7 +56,7 @@ func UploadScreenshot(w http.ResponseWriter, r *http.Request){
 	}
 	// writing bytes to the file
 	saved.Write(finalfile)
-	imgUrl := fmt.Sprintf("%v:%v/screen/%v", myhost, ThePort(), filename)
+	imgUrl := fmt.Sprintf("%v/screen/%v", myhost, filename)
 	
 	// returning the path link to User
 	json.NewEncoder(w).Encode(imgUrl)
