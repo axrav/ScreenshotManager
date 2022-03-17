@@ -24,7 +24,7 @@ func UploadScreenshot(w http.ResponseWriter, r *http.Request){
 	
 	//Making a seperate folder
 	os.MkdirAll("screenshots", os.ModePerm)
-	file, header, err := r.FormFile("file")
+	file, _, err := r.FormFile("file")
 	if err != nil{
 		fmt.Printf("[ERROR] %v\n", err)
 		return
