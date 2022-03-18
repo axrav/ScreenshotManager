@@ -30,7 +30,7 @@ func UploadScreenshot(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	defer file.Close()
-	saved, err2 := ioutil.TempFile("screenshots", "*.jpg")
+	saved, err2 := ioutil.TempFile("screenshots", "*.png")
 	if err2 != nil{
 		fmt.Printf("[ERROR] %v\n", err2)
 		return
