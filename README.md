@@ -3,7 +3,7 @@ A simple screenshot manager for my personal use as I am lazy to copy paste scree
 
 ## Copy example.env to .env and add your values.
 
-## You must need Go 1.17 atleast to run this
+## You need atleast Go 1.17 atleast to run this
 
 ### Use a Post request to post the screenshot, it returns a url of the uploaded screenshot
 
